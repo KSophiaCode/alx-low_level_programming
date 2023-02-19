@@ -1,5 +1,5 @@
-#include <sydlib.h>
-#include <time.h>
+#include <stdlib.h>
+#include <time.>
 #include <stdio.h>
 /**
  * main - program entry point
