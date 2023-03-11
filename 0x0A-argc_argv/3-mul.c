@@ -1,28 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include "main.h"
 /**
-* main - adds positive numbers
-* @argc: number of command line arguments
-* @argv: array that contains the program command line arguments
-* Return: 0 - success
+* main - prints the multiplication of two integers
+* @argc: argument count
+* @argv: argument vector
+* Return: 0 if true, 1 if false
 */
 int main(int argc, char *argv[])
 {
-	int i, j, add = 0;
+	int a, b;
 
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-
+	if (argc == 1)
 			{
-				printf("Error\n");
-				return (0);
-			}
-		}
-		add += atoi(argv[i]);
-	}
-	printf("%d\n", add);
+		a = atoi(argv[1]);
+		b = atoi(argv[2]);
+	printf("%d\n", a * b);
 	return (0);
+}
+printf("Error\n");
+return (1);
 }
