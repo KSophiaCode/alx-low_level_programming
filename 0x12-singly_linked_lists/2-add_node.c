@@ -1,44 +1,33 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * _strlen - length of the string passed
- * @s: the string
- * Return: the length of the string
+ * add_node - add new node begining of list_t
+ * @head: pointer to structure
+ * @str: string
+ * Return: the adrres of new element
  */
-int _strlen(const char *s)
-{
-	int i = 0;
 
-	while (*(s + i) != '\0')
-		i++;
-
-	return (i);
-}
-
-/**
- * add_node - prints length and string and returns amount of nodes
- * @head: pointer
- * @str: ha ex di
- * Return: amount of node
- */
 list_t *add_node(list_t **head, const char *str)
 {
-
 	list_t *newNode;
+	unsigned int length = 0;
 
-	newNode = malloc(sizeof(newNode));
-	 if (newNode == NULL)
-	 return (NULL);
-	 if (str == NULL)
-	 {
-	 free(newNode);
-	 return (NULL);
+	newNode = malloc(sizeof(list_t));
+	if (newNode == NULL)
+	{
+		free(newNode);
+		return (NULL);
 	}
-	 newNode->len = _strlen(str);
-	 newNode->str = strdup(str);
-	 newNode->next = *(head);
-	 *head = newNode;
-
-	 return (newNode);
+	newNode->str = strdup(str);
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+	newNode->len = length;
+	if (*head != NULL)
+		newNode->next = *head;
+	if (*head == NULL)
+		newNode->next = NULL;
+	*head = newNode;
+	return (*head);
 }
