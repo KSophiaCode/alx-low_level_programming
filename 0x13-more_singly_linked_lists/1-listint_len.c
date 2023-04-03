@@ -7,10 +7,10 @@
 * @h: pointer that points to the head of a list
 * Return: the amount of nodes in  a list
 */
-size_t listint_len(consy listint_t *h)
+size_t listint_len(const listint_t *h)
 
 {
-	size_t count = 0;
+	size_t count = 0;/*number of nodes*/
 
 	while (h != NULL)
 	{
