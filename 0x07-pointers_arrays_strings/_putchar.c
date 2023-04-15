@@ -1,4 +1,6 @@
-#include "main.h"\#include <unistd.h>
+#include "main.h"
+
+#include <unistd.h>
 /**
  * _putchar - writes the C character to stdout
  * @c: the character to print
