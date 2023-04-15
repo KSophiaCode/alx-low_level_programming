@@ -1,11 +1,12 @@
+#include "lists.h"
 #include <stdio.h>
 /**
- * in_the_beginning - function that prints before main executes
+ * bmain - function that prints before main executes
  * Return: nothing
  */
-void_attribute_((constructor)) in_the_beginning()
+void __attribute__ ((constructor)) bmain()
 {
-	printf("You are beat! and yet, you must allow, \n");
+	printf("You're beat! and yet, you must allow, \n");
 
 	printf("I bore my house upon my back! \n");
 }
