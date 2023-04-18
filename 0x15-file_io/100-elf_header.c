@@ -1,16 +1,15 @@
-/*
-* File: 100-elf_header.c
-* Auth: Brennan D Baraban
-*/
+#include "main.h"
+#include <stddef.h>
+#include <elf.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
 
-#include <elf.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-
+#define REV(n) ((n << 24) | (((n >> 16) << 24) >> 16) | \
+		(((n << 16) >> 24) << 16) | (n >> 24))
 void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
 void print_class(unsigned char *e_ident);
@@ -138,7 +137,7 @@ void print_version(unsigned char *e_ident)
 }
 
 /**
-* print_osabi - Prints the OS/ABI of an ELF header
+* print_osabi - Prints the Osabi of an ELF header
 * @e_ident: A pointer to an array containing the ELF version.
 */
 void print_osabi(unsigned char *e_ident)
