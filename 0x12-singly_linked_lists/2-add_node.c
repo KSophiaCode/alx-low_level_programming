@@ -1,10 +1,13 @@
 #include "lists.h"
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * add_node - add new node begining of list_t
- * @head: pointer to structure
+ * @head: pointer to struct
+ *
  * @str: string
- * Return: the adrres of new element
+ * Return: the address of new element
  */
 
 list_t *add_node(list_t **head, const char *str)
@@ -16,6 +19,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (ptr == NULL)
 		return (ptr);
 	ptr->str = strdup(str);
+
 	if (*head != NULL)
 		ptr->next = *head;
 	else
@@ -25,4 +29,5 @@ list_t *add_node(list_t **head, const char *str)
 	ptr->len = len;
 	*head = ptr;
 	return (*head);
+
 }
