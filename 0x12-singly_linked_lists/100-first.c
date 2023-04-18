@@ -1,10 +1,10 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * bmain - function that prints before main executes
+ * print_before_main - function that prints before main executes
  * Return: nothing
  */
-void __attribute__ ((constructor)) bmain()
+void print_before_main(void)
 {
 	printf("You're beat! and yet, you must allow, \n");
 
