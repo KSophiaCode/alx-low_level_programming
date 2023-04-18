@@ -1,5 +1,5 @@
-#ifndef CALC_H
-#define CALC_H
+#ifndef OPP_FUNCTION
+#define OPP_FUNCTION
 
 #include <stdio.h>
 #include <stdlib.h>

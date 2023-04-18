@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
 * op_add - calculates the sum of two integers
@@ -24,11 +26,11 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 
-**
+/**
 *op_mul - calculates the product of two integers
 * @a : first integer
 * @b : second integer
-* /
+*/
 int op_mul(int a, int b)
 {
 	return (a * b);
